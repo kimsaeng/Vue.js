@@ -1,2 +1,2 @@
 # Vue.js
-Vue.js 기초 예제입니다.
+Vue.js 예제
