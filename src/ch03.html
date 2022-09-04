@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    </head>
+<body>
+  <style>
+    .blue-underline {
+      text-decoration: underline;
+      text-decoration-color: blue;
+    }
+    .strike-through {
+      text-decoration: line-through;
+    }
+  </style>
+
+  <div id="app">
+    <p><a v-bind:href="naver">네이버로 연결</a></p>
+    <p><img v-bind:src="mario">face2.png표시</p>
+    <p v-bind:align="left">텍스트를 왼쪽 정렬</p>
+    <p v-bind:align="right">텍스트를 오른쪽 정렬</p>
+    <p v-bind:align="center">텍스트를 가운데 정렬</p>
+    <p v-bind:style="{color:red}">인라인 스타일로 글자색을 빨간색으로</p>
+    <p v-bind:style="{fontSize:mySize, color:red}">인라인 스타일로 글자크기를 150% 크게 빨간색으로</p>
+    <p v-bind:style="{fontSize:mySize, color:red, backgroundColor:yellow}">인라인 스타일로 글자크기를 150% 크게 빨간색으로 배경은 노란색으로</p> -->
+    <p v-bind:class="blueClass">blue-underline class 지정</p>
+    <p v-bind:class="[blueClass, strikethroughClass]">blue-underline, strike-through class지정</p>
+  </div>
+
+  <script>
+    new Vue({
+      el:'#app',
+      data: {
+        naver: "https://naver.com",
+        mario: "./src/assets/mario.png",
+        left: "left",
+        right: "right",
+        center: "center",
+        red: "red",
+        yellow: "yellow",
+        mySize: "150%",
+        blueClass: "blue-underline",
+        strikethroughClass: "strike-through"      
+      }
+    })
+  </script>
+</body>
+</html>

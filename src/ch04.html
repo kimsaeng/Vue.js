@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue.js sample</title>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    </head>
+<body>
+<h2>입력폼 활용</h2>
+<div id="app">
+  <label>이름: <input v-model="myName" placeholder="홍길동"></label><br>
+  좋아하는 색은: <br>
+  <label><input type="radio" value="red" v-model="myColors">빨강</label><br>
+  <label><input type="radio" value="green" v-model="myColors">녹색</label><br>
+  <label><input type="radio" value="blue" v-model="myColors">파랑색</label><br>
+  <label><input type="radio" value="yellow" v-model="myColors">노란색</label><br>
+  <label><input type="radio" value="gray" v-model="myColors">회색</label><br>
+  <p>내 이름은 {{ myName }} 이고 좋아하는 색은 {{ myColors }} 입니다.</p>
+</div>
+<script>
+  new Vue({ 
+    el:'#app',
+    data: {
+      myName: '',
+      myColors: ''
+    }
+  })
+</script>
+</body>
+</html>
